@@ -1,0 +1,16 @@
+{% extends 'notes/base.html' %}
+
+{% block content %}
+<div style="max-width: 400px; margin: 0 auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; background: #fafafa;">
+    <h3 style="color: #4a154b; text-align: center;">Автентифікація</h3>
+    <form method="post">
+        {% csrf_token %}
+        <div style="margin-bottom: 15px;">
+            {{ form.as_p }}
+        </div>
+        <button type="submit" style="width: 100%; background-color: #4a154b; color: #ffcc00; border: none; padding: 10px; font-weight: bold; border-radius: 5px; cursor: pointer;">
+            Увійти
+        </button>
+    </form>
+</div>
+{% endblock %}
